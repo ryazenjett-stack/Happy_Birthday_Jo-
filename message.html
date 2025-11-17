@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>To Jenah Roxanne</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="message-page">
+  <div class="romantic-hearts" id="romanticHearts"></div>
+  <div class="message-card">
+    <h2>Dear Jenah Roxanne,</h2>
+    <p>
+      I know this might feel sudden, but I needed to say what I kept inside.  
+      You deserved honesty and care that I failed to give before.  
+      I made mistakes that hurt you and pushed you away, and I think about them more than I admit.  
+      Every day, I wish I had handled things with more patience and love.
+    </p>
+    <p>
+      I still remember your laugh, your warmth, and the small things that made us feel real.  
+      Losing that connection made me realize how much you mattered in ways words cannot measure.  
+      I never meant to cause you pain. I am sorry for all the times I made you doubt my heart.  
+      You deserve someone who listens, respects, and stays true.  
+      I hope you find peace and happiness, whether or not I am part of it.
+    </p>
+    <p>
+      Happy birthday once more. I hope your year ahead brings calm days, comfort, and the kind of love that feels steady.  
+      If you ever choose to talk again, I’ll be grateful for the chance to start over, even as friends.  
+      Thank you for every moment that once made us feel alive.
+    </p>
+    <p>— From someone who still cares</p>
+
+    <a href="#" onclick="window.parent && window.parent.goToPage ? window.parent.goToPage('index.html') : window.location.href='index.html'" class="btn" style="margin-top:16px;">Back to Main</a>
+</body>
+</html>
+<script>
+const heartContainer = document.getElementById("romanticHearts");
+
+function createHeart() {
+  const h = document.createElement("div");
+  h.className = "rheart";
+  h.textContent = "❤";
+  const size = Math.random() * 14 + 14;
+  h.style.fontSize = size + "px";
+  h.style.left = Math.random() * 100 + "%";
+  h.style.bottom = "-30px";
+  h.style.animationDuration = 7000 + Math.random() * 4000 + "ms";
+  heartContainer.appendChild(h);
+
+  setTimeout(() => h.remove(), 12000);
+}
+
+setInterval(createHeart, 600);
+</script>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Main Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Music Player -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="iris.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Main Content Frame -->
+  <iframe id="contentFrame" src="index.html" style="width:100%;height:100vh;border:none;"></iframe>
+
+  <script>
+    // Keep music playing when switching pages
+    function goToPage(page) {
+      document.getElementById("contentFrame").src = page;
+    }
+
+    // Optional: make this function global
+    window.goToPage = goToPage;
+  </script>
+</body>
+</html>

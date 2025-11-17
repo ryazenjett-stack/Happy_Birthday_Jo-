@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>For Jenah Roxanne — Birthday & Apology</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card" role="main">
+    <canvas id="confetti"></canvas>
+    <div class="hearts" id="hearts"></div>
+    <main>
+      <section class="stage">
+        <div class="greeting-area">
+          <p class="greet">Happy Birthday</p>
+          <p class="name">Jenah Roxanne</p>
+          <p class="sub">I hope this makes your day softer and brighter.</p>
+
+          <div class="message">
+            <div id="messageText" class="typing"></div>
+          </div>
+
+          <div class="controls">
+            <button id="replayBtn" class="btn">Replay sequence</button>
+            <button id="albumBtn" class="ghost">Open album</button>
+            <a href="#" onclick="window.parent && window.parent.goToPage ? window.parent.goToPage('message.html') : window.location.href='message.html'" class="btn">Read My Message</a>
+            <button id="fullscreenBtn">Fullscreen</button>
+          </div>
+        </div>
+
+        <div class="dog-gallery">
+          <h3>Little FurBabies</h3>
+          <div class="dog-photos">
+            <img src="dog1.jpg" alt="Dog 1">
+            <img src="dog2.jpg" alt="Dog 2">
+            <img src="dog3.jpg" alt="Dog 3">
+            <img src="dog4.jpg" alt="Dog 4">
+            <img src="dog5.jpg" alt="Dog 5">
+          </div>
+        </div>
+      </section>
+
+      <aside class="sidebar">
+        <div class="panel">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <strong>Photo album</strong>
+            <span class="hint">15 photos</span>
+          </div>
+
+          <div class="uploader">
+            <div class="thumbs" id="thumbs">
+              <img src="photo1.jpg" alt="Photo 1">
+              <img src="photo2.jpg" alt="Photo 2">
+              <img src="photo3.jpg" alt="Photo 3">
+              <img src="photo4.jpg" alt="Photo 4">
+              <img src="photo5.jpg" alt="Photo 5">
+              <img src="photo6.jpg" alt="Photo 6">
+              <img src="photo7.jpg" alt="Photo 7">
+              <img src="photo8.jpg" alt="Photo 8">
+              <img src="photo9.jpg" alt="Photo 9">
+              <img src="photo10.jpg" alt="Photo 10">
+              <img src="photo11.jpg" alt="Photo 11">
+              <img src="photo12.jpg" alt="Photo 12">
+              <img src="photo13.jpg" alt="Photo 13">
+              <img src="photo14.jpg" alt="Photo 14">
+              <img src="photo15.jpg" alt="Photo 15">
+            </div>
+
+            <div class="slideshow" id="slideshow">
+              <img id="slideImg" class="slide" src="photo1.jpg" alt="slide">
+              <div class="pager" id="pager"></div>
+            </div>
+
+            <div class="side-controls">
+              <div>
+                <button id="prevBtn" class="ghost">Prev</button>
+                <button id="nextBtn" class="ghost">Next</button>
+              </div>
+              <div>
+                <button id="playSlideshow" class="btn">Play slideshow</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="height:12px"></div>
+        <div class="panel">
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <strong>Music</strong>
+            <span class="hint">You're my IRIS</span>
+          </div>
+          <div style="margin-top:8px;display:flex;gap:8px;align-items:center">
+            <audio id="bgMusic" preload="auto" loop>
+              <source src="iris.mp3" type="audio/mpeg">
+              Your browser does not support audio.
+            </audio>
+            <button id="playAudio" class="btn">Play music</button>
+            <button id="pauseAudio" class="ghost">Pause</button>
+          </div>
+          <div style="margin-top:8px;color:var(--muted);font-size:13px">
+            Tap Play before starting the greeting.
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div class="hint">Click Read My Message for the next part.</div>
+      <div class="audio-wrap">
+        <div class="hint">Volume</div>
+        <input id="volume" type="range" min="0" max="1" step="0.05" value="0.4">
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
